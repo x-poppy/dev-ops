@@ -1,0 +1,24 @@
+# accounting.jar
+# notify.jar
+# ftSecurity.jar
+# detour.jar
+# acquiring.jar
+# agentPayApi.jar
+# sso.jar
+# settle.jar
+# eims.jar
+# finance.jar
+# diabloModule-customer.jar
+# diabloModule-dashboard.jar
+# diabloModule-account.jar
+# diabloModule-operation.jar
+# diabloService.jar
+# customer.jar
+# strategy.jar
+
+
+.bin/
+.DS_Store
+
+.vscode/
+.idea

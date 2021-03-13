@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  redis:
+    image: redis:6.2.1-alpine
+    volumes:
+      - /etc/localtime:/etc/localtime
+    ports:
+      - "6379:6379"
+    deploy:
+      mode: global
+      restart_policy:
+        condition: on-failure
