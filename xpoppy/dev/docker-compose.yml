@@ -10,3 +10,15 @@ services:
       mode: global
       restart_policy:
         condition: on-failure
+
+  mysql:
+    image: redis:6.2.1-alpine
+    volumes:
+      - /etc/localtime:/etc/localtime
+    command: --default-authentication-plugin=mysql_native_password  
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
