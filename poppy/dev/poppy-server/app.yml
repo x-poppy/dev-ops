@@ -1,0 +1,51 @@
+webserver:
+  port: 7001
+
+static:
+  prefix: /public
+
+i18n:
+  defaultLocale: en
+
+redis:
+  keyPrefix: 'poppy:'
+  host: redis
+  port: 6379
+
+views:
+  suffix: 'ejs'
+
+security:
+  cors:
+    origin: "*"
+
+typeorm:
+  type: mysql
+  host: mysql
+  port: 3306
+  database: poppy
+  username: root
+  password: example
+  maxQueryExecutionTime: 10000
+  synchronize: true
+  logging:
+    - error
+    - query
+
+log4js:
+  appenders:
+    out:
+      type: 'stdout'
+  categories:
+    default:
+      appenders:
+        - 'out'
+      level: 'all'
+
+mail:
+  host: "smtp.163.com"
+  port: 25
+  secure: false
+  auth:
+    user: xxxxx@xx.com
+    pass: 'xxx'
