@@ -9,7 +9,7 @@ i18n:
 
 redis:
   keyPrefix: 'poppy:'
-  host: redis
+  host: 106.14.147.173
   port: 6379
 
 views:
@@ -21,7 +21,7 @@ security:
 
 typeorm:
   type: mysql
-  host: mysql
+  host: 106.14.147.173
   port: 3306
   database: poppy
   username: root
