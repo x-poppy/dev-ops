@@ -12,8 +12,6 @@ services:
   deploy:
     mode: replicated  
     replicas: 2
-    restart_policy:
-      condition: on-failure  
 
   redis:
     image: redis:6.2.1-alpine
