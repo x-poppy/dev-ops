@@ -7,8 +7,8 @@ services:
     environment:
       - NODE_ENV=production
       - /etc/localtime:/etc/localtime
-  ports:
-    - "7001:7001"
+    ports:
+      - "7001:7001"
   deploy:
     mode: replicated  
     replicas: 2
