@@ -9,9 +9,11 @@ services:
       - /etc/localtime:/etc/localtime
     ports:
       - "7001:7001"
-  deploy:
-    mode: replicated  
-    replicas: 2
+    deploy:
+      mode: replicated  
+      replicas: 2
+      restart_policy:
+        condition: on-failure  
 
   redis:
     image: redis:6.2.1-alpine
