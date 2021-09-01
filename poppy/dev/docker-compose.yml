@@ -3,14 +3,14 @@ services:
   poppy-server:
     image: docker.pkg.github.com/x-poppy/poppy-server/poppy-server
     volumes:
-      - /opt/ops/poppy-devops/poppy/dev/popp-server:/app/dist/config
+      - /opt/ops/poppy-devops/poppy/dev/poppy-server:/app/dist/config
     environment:
       - NODE_ENV=production
       - /etc/localtime:/etc/localtime
     ports:
       - "7001:7001"
     deploy:
-      mode: replicated  
+      mode: replicated
       replicas: 2
       restart_policy:
         condition: on-failure  
