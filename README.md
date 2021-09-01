@@ -24,7 +24,7 @@ http://www.redis.cn/commands.html
 docker swarm init
 docker swarm join --token SWMTKN-1-1k0sqv8rxbwhlwoi2hith5hi1e50y050ly10s22m5tbz7yqpjs-14mrese70xbin79r68ack01qd 172.19.50.116:2377
 
-docker stack deploy --prune -c /opt/ops/poppy-devops/poppy/dev/docker-compose.yml xpoppy --with-registry-auth
+docker stack deploy --prune -c /opt/ops/poppy-devops/poppy/dev/docker-compose.yml poppy --with-registry-auth
 ```
 
 visit [augejs.github.io](https://github.com/augejs/augejs.github.io). :tada:
