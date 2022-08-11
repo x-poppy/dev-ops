@@ -1,20 +1,19 @@
 version: "3.8"
 services:
-  poppy-server:
-    image: docker.pkg.github.com/x-poppy/poppy-server/poppy-server:latest
-    volumes:
-      - /opt/ops/poppy-devops/poppy/dev/poppy-server:/app/dist/config
-    environment:
-      - NODE_ENV=production
-      - /etc/localtime:/etc/localtime
-    ports:
-      - "7001:7001"
-    deploy:
-      mode: replicated
-      replicas: 2
-      restart_policy:
-        condition: on-failure  
-
+  # poppy-server:
+  #   image: docker.pkg.github.com/x-poppy/poppy-server/poppy-server:latest
+  #   volumes:
+  #     - /opt/ops/poppy-devops/poppy/dev/poppy-server:/app/dist/config
+  #   environment:
+  #     - NODE_ENV=production
+  #     - /etc/localtime:/etc/localtime
+  #   ports:
+  #     - "7001:7001"
+  #   deploy:
+  #     mode: replicated
+  #     replicas: 2
+  #     restart_policy:
+  #       condition: on-failure  
   redis:
     image: redis:6.2.1-alpine
     volumes:
@@ -24,12 +23,13 @@ services:
     deploy:
       mode: global
       restart_policy:
-        condition: on-failure
+        condition: on-failure  
 
   mysql:
     image: mysql:8
     volumes:
       - /etc/localtime:/etc/localtime
+      - /opt/app/mysql-data:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password  
     ports:
       - "3306:3306"
