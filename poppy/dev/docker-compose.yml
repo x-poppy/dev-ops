@@ -20,6 +20,7 @@ services:
       - /etc/localtime:/etc/localtime
     ports:
       - "6379:6379"
+    command: redis-server --requirepass example
     deploy:
       mode: global
       restart_policy:
